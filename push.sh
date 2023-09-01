@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git init
+
 if [-z "$1"]; then
 
     echo "Usage: $0 <commit_message>"
@@ -7,12 +9,14 @@ if [-z "$1"]; then
 
 fi
 
-git remote add origin https://github.com/Garfiend/redesigned-fishstick.git
 
-git branch -M main
 
 git add .
 
 git commit -m "$1"
 
-git push origin main
+git branch -M main
+
+git remote add origin https://github.com/Garfiend/glowing-fortnight.git
+
+git push -u origin main
